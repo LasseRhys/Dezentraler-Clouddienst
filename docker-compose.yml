@@ -1,0 +1,170 @@
+
+services:
+  # Koordinationsdienst / Middleman
+  middleman:
+    build:
+      context: ./middleman
+      dockerfile: Dockerfile
+    container_name: resource_broker
+    ports:
+      - "5000:5000"
+      - "5001:5001"  # Monitoring Dashboard
+    environment:
+      - MIDDLEMAN_PORT=5000
+      - MONITORING_PORT=5001
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    volumes:
+      - ./middleman:/app
+      - middleman_logs:/app
+    depends_on:
+      - redis
+    networks:
+      - cloud_network
+    restart: unless-stopped
+
+  # Redis für State-Management und Message Queue
+  redis:
+    image: redis:7-alpine
+    container_name: redis_cache
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - cloud_network
+    restart: unless-stopped
+
+  # Simulierte Provider-Hosts (3 Instanzen)
+  host1:
+    build:
+      context: ./provider
+      dockerfile: Dockerfile
+    container_name: Berlin
+    environment:
+      - HOST_ID=host_1
+      - HOST_NAME=Provider-Alpha
+      - MIDDLEMAN_URL=http://middleman:5000
+      - CPU_CAPACITY=4
+      - MEMORY_CAPACITY=8192
+      - UPTIME_PROBABILITY=0.95
+      - FAILURE_SIMULATION=true
+    volumes:
+      - ./provider:/app
+      - provider1_data:/app/data
+    depends_on:
+      - middleman
+    networks:
+      - cloud_network
+    restart: unless-stopped
+
+  host2:
+    build:
+      context: ./provider
+      dockerfile: Dockerfile
+    container_name: Juneau
+    environment:
+      - HOST_ID=host_2
+      - HOST_NAME=Provider-Beta
+      - MIDDLEMAN_URL=http://middleman:5000
+      - CPU_CAPACITY=8
+      - MEMORY_CAPACITY=16384
+      - UPTIME_PROBABILITY=0.85
+      - FAILURE_SIMULATION=true
+    volumes:
+      - ./provider:/app
+      - provider2_data:/app/data
+    depends_on:
+      - middleman
+    networks:
+      - cloud_network
+    restart: unless-stopped
+
+  host3:
+    build:
+      context: ./provider
+      dockerfile: Dockerfile
+    container_name: Tuva
+    environment:
+      - HOST_ID=host_3
+      - HOST_NAME=Provider-Gamma
+      - MIDDLEMAN_URL=http://middleman:5000
+      - CPU_CAPACITY=2
+      - MEMORY_CAPACITY=4096
+      - UPTIME_PROBABILITY=0.70
+      - FAILURE_SIMULATION=true
+    volumes:
+      - ./provider:/app
+      - provider3_data:/app/data
+    depends_on:
+      - middleman
+    networks:
+      - cloud_network
+    restart: unless-stopped
+
+  # Simulierter Client für Aufgaben
+  client:
+    build:
+      context: ./user
+      dockerfile: Dockerfile
+    container_name: resource_client
+    environment:
+      - MIDDLEMAN_URL=http://middleman:5000
+      - TASK_INTERVAL=30
+    volumes:
+      - ./user:/app
+      - user_logs:/app/logs
+    depends_on:
+      - middleman
+    networks:
+      - cloud_network
+    restart: unless-stopped
+
+  # Monitoring & Metrics (Prometheus)
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+    networks:
+      - cloud_network
+    restart: unless-stopped
+
+  # Grafana für Visualisierung
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_SECURITY_ADMIN_USER=admin
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./monitoring/grafana/dashboards:/etc/grafana/provisioning/dashboards
+      - ./monitoring/grafana/datasources:/etc/grafana/provisioning/datasources
+    depends_on:
+      - prometheus
+    networks:
+      - cloud_network
+    restart: unless-stopped
+
+networks:
+  cloud_network:
+    driver: bridge
+
+volumes:
+  middleman_logs:
+  redis_data:
+  provider1_data:
+  provider2_data:
+  provider3_data:
+  user_logs:
+  prometheus_data:
+  grafana_data:
