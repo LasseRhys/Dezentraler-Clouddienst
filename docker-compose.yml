@@ -1,6 +1,7 @@
+version: '3.8'
 
 services:
-  # Koordinationsdienst / Middleman
+
   middleman:
     build:
       context: ./middleman
@@ -8,22 +9,20 @@ services:
     container_name: resource_broker
     ports:
       - "5000:5000"
-      - "5001:5001"  # Monitoring Dashboard
     environment:
       - MIDDLEMAN_PORT=5000
-      - MONITORING_PORT=5001
       - REDIS_HOST=redis
       - REDIS_PORT=6379
     volumes:
       - ./middleman:/app
-      - middleman_logs:/app
+      - middleman_logs:/app/logs
     depends_on:
       - redis
     networks:
       - cloud_network
     restart: unless-stopped
 
-  # Redis für State-Management und Message Queue
+ 
   redis:
     image: redis:7-alpine
     container_name: redis_cache
@@ -34,60 +33,160 @@ services:
     networks:
       - cloud_network
     restart: unless-stopped
+    command: redis-server --appendonly yes
 
-  # Simulierte Provider-Hosts (3 Instanzen)
-  host1:
+
+  
+  host_berlin:
     build:
       context: ./provider
       dockerfile: Dockerfile
     container_name: Berlin
     environment:
-      - HOST_ID=host_1
-      - HOST_NAME=Provider-Alpha
+      - HOST_ID=host_berlin
+      - HOST_NAME=Berlin-01
+      - LOCATION=europe
       - MIDDLEMAN_URL=http://middleman:5000
-      - CPU_CAPACITY=4
-      - MEMORY_CAPACITY=8192
+      - CPU_CAPACITY=8
+      - MEMORY_CAPACITY=16384
       - UPTIME_PROBABILITY=0.95
       - FAILURE_SIMULATION=true
     volumes:
       - ./provider:/app
-      - provider1_data:/app/data
+      - berlin_data:/app/data
     depends_on:
       - middleman
     networks:
       - cloud_network
     restart: unless-stopped
 
-  host2:
+  host_paris:
     build:
       context: ./provider
       dockerfile: Dockerfile
-    container_name: Juneau
+    container_name: Paris
     environment:
-      - HOST_ID=host_2
-      - HOST_NAME=Provider-Beta
+      - HOST_ID=host_paris
+      - HOST_NAME=Paris-01
+      - LOCATION=europe
       - MIDDLEMAN_URL=http://middleman:5000
-      - CPU_CAPACITY=8
-      - MEMORY_CAPACITY=16384
-      - UPTIME_PROBABILITY=0.85
+      - CPU_CAPACITY=4
+      - MEMORY_CAPACITY=8192
+      - UPTIME_PROBABILITY=0.90
       - FAILURE_SIMULATION=true
     volumes:
       - ./provider:/app
-      - provider2_data:/app/data
+      - paris_data:/app/data
     depends_on:
       - middleman
     networks:
       - cloud_network
     restart: unless-stopped
 
-  host3:
+ 
+  host_nyc:
     build:
       context: ./provider
       dockerfile: Dockerfile
-    container_name: Tuva
+    container_name: NewYork
     environment:
-      - HOST_ID=host_3
-      - HOST_NAME=Provider-Gamma
+      - HOST_ID=host_nyc
+      - HOST_NAME=NYC-01
+      - LOCATION=north_america
+      - MIDDLEMAN_URL=http://middleman:5000
+      - CPU_CAPACITY=16
+      - MEMORY_CAPACITY=32768
+      - UPTIME_PROBABILITY=0.98
+      - FAILURE_SIMULATION=true
+    volumes:
+      - ./provider:/app
+      - nyc_data:/app/data
+    depends_on:
+      - middleman
+    networks:
+      - cloud_network
+    restart: unless-stopped
+
+  host_sf:
+    build:
+      context: ./provider
+      dockerfile: Dockerfile
+    container_name: SanFrancisco
+    environment:
+      - HOST_ID=host_sf
+      - HOST_NAME=SF-01
+      - LOCATION=north_america
+      - MIDDLEMAN_URL=http://middleman:5000
+      - CPU_CAPACITY=8
+      - MEMORY_CAPACITY=16384
+      - UPTIME_PROBABILITY=0.92
+      - FAILURE_SIMULATION=true
+    volumes:
+      - ./provider:/app
+      - sf_data:/app/data
+    depends_on:
+      - middleman
+    networks:
+      - cloud_network
+    restart: unless-stopped
+
+ 
+  host_tokyo:
+    build:
+      context: ./provider
+      dockerfile: Dockerfile
+    container_name: Tokyo
+    environment:
+      - HOST_ID=host_tokyo
+      - HOST_NAME=Tokyo-01
+      - LOCATION=asia
+      - MIDDLEMAN_URL=http://middleman:5000
+      - CPU_CAPACITY=12
+      - MEMORY_CAPACITY=24576
+      - UPTIME_PROBABILITY=0.96
+      - FAILURE_SIMULATION=true
+    volumes:
+      - ./provider:/app
+      - tokyo_data:/app/data
+    depends_on:
+      - middleman
+    networks:
+      - cloud_network
+    restart: unless-stopped
+
+  host_singapore:
+    build:
+      context: ./provider
+      dockerfile: Dockerfile
+    container_name: Singapore
+    environment:
+      - HOST_ID=host_singapore
+      - HOST_NAME=Singapore-01
+      - LOCATION=asia
+      - MIDDLEMAN_URL=http://middleman:5000
+      - CPU_CAPACITY=6
+      - MEMORY_CAPACITY=12288
+      - UPTIME_PROBABILITY=0.88
+      - FAILURE_SIMULATION=true
+    volumes:
+      - ./provider:/app
+      - singapore_data:/app/data
+    depends_on:
+      - middleman
+    networks:
+      - cloud_network
+    restart: unless-stopped
+
+  
+  host_edge:
+    build:
+      context: ./provider
+      dockerfile: Dockerfile
+    container_name: EdgeNode
+    environment:
+      - HOST_ID=host_edge
+      - HOST_NAME=Edge-01
+      - LOCATION=europe
       - MIDDLEMAN_URL=http://middleman:5000
       - CPU_CAPACITY=2
       - MEMORY_CAPACITY=4096
@@ -95,14 +194,14 @@ services:
       - FAILURE_SIMULATION=true
     volumes:
       - ./provider:/app
-      - provider3_data:/app/data
+      - edge_data:/app/data
     depends_on:
       - middleman
     networks:
       - cloud_network
     restart: unless-stopped
 
-  # Simulierter Client für Aufgaben
+  
   client:
     build:
       context: ./user
@@ -110,7 +209,7 @@ services:
     container_name: resource_client
     environment:
       - MIDDLEMAN_URL=http://middleman:5000
-      - TASK_INTERVAL=30
+      - TASK_INTERVAL=20
     volumes:
       - ./user:/app
       - user_logs:/app/logs
@@ -120,7 +219,7 @@ services:
       - cloud_network
     restart: unless-stopped
 
-  # Monitoring & Metrics (Prometheus)
+  
   prometheus:
     image: prom/prometheus:latest
     container_name: prometheus
@@ -132,11 +231,11 @@ services:
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
       - '--storage.tsdb.path=/prometheus'
+      - '--storage.tsdb.retention.time=30d'
     networks:
       - cloud_network
     restart: unless-stopped
 
-  # Grafana für Visualisierung
   grafana:
     image: grafana/grafana:latest
     container_name: grafana
@@ -145,6 +244,7 @@ services:
     environment:
       - GF_SECURITY_ADMIN_PASSWORD=admin
       - GF_SECURITY_ADMIN_USER=admin
+      - GF_INSTALL_PLUGINS=grafana-piechart-panel
     volumes:
       - grafana_data:/var/lib/grafana
       - ./monitoring/grafana/dashboards:/etc/grafana/provisioning/dashboards
@@ -162,9 +262,13 @@ networks:
 volumes:
   middleman_logs:
   redis_data:
-  provider1_data:
-  provider2_data:
-  provider3_data:
+  berlin_data:
+  paris_data:
+  nyc_data:
+  sf_data:
+  tokyo_data:
+  singapore_data:
+  edge_data:
   user_logs:
   prometheus_data:
   grafana_data:

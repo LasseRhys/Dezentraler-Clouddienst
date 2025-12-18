@@ -1,0 +1,905 @@
+2025-12-18 00:29:29,213 - __main__ - INFO - Middleman
+2025-12-18 00:29:29,226 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.4:5000
+2025-12-18 00:29:29,227 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-12-18 00:29:34,098 - __main__ - INFO - Host registriert: host_berlin (Berlin-01) in europe
+2025-12-18 00:29:34,099 - __main__ - INFO - Host registriert: host_edge (Edge-01) in europe
+2025-12-18 00:29:34,101 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:29:34] "POST /register HTTP/1.1" 200 -
+2025-12-18 00:29:34,101 - __main__ - INFO - Host registriert: host_sf (SF-01) in north_america
+2025-12-18 00:29:34,103 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:29:34] "POST /register HTTP/1.1" 200 -
+2025-12-18 00:29:34,105 - __main__ - INFO - Host registriert: host_tokyo (Tokyo-01) in asia
+2025-12-18 00:29:34,106 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:29:34] "POST /register HTTP/1.1" 200 -
+2025-12-18 00:29:34,112 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:29:34] "POST /register HTTP/1.1" 200 -
+2025-12-18 00:29:34,113 - __main__ - INFO - Host registriert: host_singapore (Singapore-01) in asia
+2025-12-18 00:29:34,116 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:29:34] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:29:34,118 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:29:34] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:34,122 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:29:34] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:29:34,126 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:29:34] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:34,131 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:29:34] "POST /register HTTP/1.1" 200 -
+2025-12-18 00:29:34,135 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:29:34] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:34,139 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:29:34] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:29:34,142 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:29:34] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:34,143 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:29:34] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:29:34,147 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:29:34] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:34,147 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:29:34] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:29:34,171 - __main__ - INFO - Host registriert: host_nyc (NYC-01) in north_america
+2025-12-18 00:29:34,171 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:29:34] "POST /register HTTP/1.1" 200 -
+2025-12-18 00:29:34,174 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:29:34] "GET /health HTTP/1.1" 200 -
+2025-12-18 00:29:34,176 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:29:34] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:34,177 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:29:34] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:29:34,179 - __main__ - INFO - Erstelle 6 Shards für Task task_1_1766017774
+2025-12-18 00:29:34,181 - __main__ - INFO - Task task_1_1766017774 in 6 Shards aufgeteilt
+2025-12-18 00:29:34,182 - __main__ - INFO - Aufgabe eingereicht: task_1_1766017774 (Shardable: True)
+2025-12-18 00:29:34,182 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:29:34] "[35m[1mPOST /submit_task HTTP/1.1[0m" 201 -
+2025-12-18 00:29:34,185 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:29:34] "GET /task/task_1_1766017774 HTTP/1.1" 200 -
+2025-12-18 00:29:34,187 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:29:34] "GET /health HTTP/1.1" 200 -
+2025-12-18 00:29:34,190 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:29:34] "GET /hosts HTTP/1.1" 200 -
+2025-12-18 00:29:34,191 - __main__ - INFO - Host registriert: host_paris (Paris-01) in europe
+2025-12-18 00:29:34,192 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:29:34] "POST /register HTTP/1.1" 200 -
+2025-12-18 00:29:34,196 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:29:34] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:34,197 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:29:34] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:29:34,231 - __main__ - INFO - Shard task_1_1766017774_shard_0 zugewiesen an host_paris
+2025-12-18 00:29:34,733 - __main__ - INFO - Shard task_1_1766017774_shard_1 zugewiesen an host_singapore
+2025-12-18 00:29:35,236 - __main__ - INFO - Shard task_1_1766017774_shard_2 zugewiesen an host_singapore
+2025-12-18 00:29:35,738 - __main__ - INFO - Shard task_1_1766017774_shard_3 zugewiesen an host_berlin
+2025-12-18 00:29:36,242 - __main__ - INFO - Shard task_1_1766017774_shard_4 zugewiesen an host_berlin
+2025-12-18 00:29:36,743 - __main__ - INFO - Shard task_1_1766017774_shard_5 zugewiesen an host_berlin
+2025-12-18 00:29:37,140 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:29:37] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:37,143 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:29:37] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:37,147 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:29:37] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:37,148 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:29:37] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:37,151 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:29:37] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:37,181 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:29:37] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:37,200 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:29:37] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:40,146 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:29:40] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:40,147 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:29:40] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:40,152 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:29:40] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:40,154 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:29:40] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:40,156 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:29:40] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:40,184 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:29:40] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:40,203 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:29:40] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:43,151 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:29:43] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:43,152 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:29:43] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:43,157 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:29:43] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:43,159 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:29:43] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:43,161 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:29:43] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:43,188 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:29:43] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:43,207 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:29:43] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:44,181 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:29:44] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:29:44,182 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:29:44] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:29:44,183 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:29:44] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:29:44,184 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:29:44] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:29:44,185 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:29:44] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:29:44,186 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:29:44] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:29:44,201 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:29:44] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:29:46,156 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:29:46] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:46,156 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:29:46] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:46,161 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:29:46] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:46,163 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:29:46] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:46,165 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:29:46] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:46,191 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:29:46] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:46,211 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:29:46] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:49,159 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:29:49] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:49,160 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:29:49] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:49,164 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:29:49] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:49,167 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:29:49] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:49,169 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:29:49] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:49,194 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:29:49] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:49,214 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:29:49] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:52,163 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:29:52] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:52,163 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:29:52] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:52,167 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:29:52] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:52,170 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:29:52] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:52,173 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:29:52] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:52,197 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:29:52] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:52,217 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:29:52] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:54,190 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:29:54] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:29:54,191 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:29:54] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:29:54,191 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:29:54] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:29:54,192 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:29:54] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:29:54,192 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:29:54] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:29:54,193 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:29:54] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:29:54,195 - __main__ - INFO - Erstelle 6 Shards für Task task_2_1766017794
+2025-12-18 00:29:54,199 - __main__ - INFO - Task task_2_1766017794 in 6 Shards aufgeteilt
+2025-12-18 00:29:54,200 - __main__ - INFO - Aufgabe eingereicht: task_2_1766017794 (Shardable: True)
+2025-12-18 00:29:54,200 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:29:54] "[35m[1mPOST /submit_task HTTP/1.1[0m" 201 -
+2025-12-18 00:29:54,203 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:29:54] "GET /task/task_1_1766017774 HTTP/1.1" 200 -
+2025-12-18 00:29:54,205 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:29:54] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:29:54,206 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:29:54] "GET /task/task_2_1766017794 HTTP/1.1" 200 -
+2025-12-18 00:29:54,209 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:29:54] "GET /health HTTP/1.1" 200 -
+2025-12-18 00:29:54,211 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:29:54] "GET /hosts HTTP/1.1" 200 -
+2025-12-18 00:29:54,269 - __main__ - INFO - Shard task_2_1766017794_shard_0 zugewiesen an host_paris
+2025-12-18 00:29:54,772 - __main__ - INFO - Shard task_2_1766017794_shard_1 zugewiesen an host_edge
+2025-12-18 00:29:55,166 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:29:55] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:55,167 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:29:55] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:55,170 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:29:55] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:55,173 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:29:55] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:55,177 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:29:55] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:55,201 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:29:55] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:55,220 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:29:55] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:55,274 - __main__ - INFO - Shard task_2_1766017794_shard_2 zugewiesen an host_edge
+2025-12-18 00:29:55,776 - __main__ - INFO - Shard task_2_1766017794_shard_3 zugewiesen an host_sf
+2025-12-18 00:29:56,279 - __main__ - INFO - Shard task_2_1766017794_shard_4 zugewiesen an host_sf
+2025-12-18 00:29:56,781 - __main__ - INFO - Shard task_2_1766017794_shard_5 zugewiesen an host_sf
+2025-12-18 00:29:58,169 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:29:58] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:58,170 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:29:58] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:58,173 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:29:58] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:58,175 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:29:58] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:58,180 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:29:58] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:58,203 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:29:58] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:58,222 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:29:58] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:29:59,148 - __main__ - INFO - Shard task_1_1766017774_shard_5 abgeschlossen: Erfolg
+2025-12-18 00:29:59,148 - __main__ - INFO - Shard task_1_1766017774_shard_3 abgeschlossen: Fehlgeschlagen
+2025-12-18 00:29:59,149 - __main__ - INFO - Shard task_1_1766017774_shard_4 abgeschlossen: Erfolg
+2025-12-18 00:29:59,149 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:29:59] "POST /shard/task_1_1766017774_shard_5/complete HTTP/1.1" 200 -
+2025-12-18 00:29:59,150 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:29:59] "POST /shard/task_1_1766017774_shard_3/complete HTTP/1.1" 200 -
+2025-12-18 00:29:59,151 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:29:59] "POST /shard/task_1_1766017774_shard_4/complete HTTP/1.1" 200 -
+2025-12-18 00:29:59,156 - __main__ - INFO - Shard task_1_1766017774_shard_1 abgeschlossen: Erfolg
+2025-12-18 00:29:59,157 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:29:59] "POST /shard/task_1_1766017774_shard_1/complete HTTP/1.1" 200 -
+2025-12-18 00:29:59,158 - __main__ - INFO - Shard task_1_1766017774_shard_2 abgeschlossen: Erfolg
+2025-12-18 00:29:59,159 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:29:59] "POST /shard/task_1_1766017774_shard_2/complete HTTP/1.1" 200 -
+2025-12-18 00:29:59,203 - __main__ - WARNING - Task task_1_1766017774 mit 1 fehlgeschlagenen Shards
+2025-12-18 00:29:59,204 - __main__ - INFO - Shard task_1_1766017774_shard_0 abgeschlossen: Erfolg
+2025-12-18 00:29:59,204 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:29:59] "POST /shard/task_1_1766017774_shard_0/complete HTTP/1.1" 200 -
+2025-12-18 00:30:01,173 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:30:01] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:01,174 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:30:01] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:01,178 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:30:01] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:01,179 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:30:01] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:01,183 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:30:01] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:01,207 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:30:01] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:01,226 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:01] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:03,424 - __main__ - INFO - Shard task_2_1766017794_shard_1 abgeschlossen: Erfolg
+2025-12-18 00:30:03,424 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:30:03] "POST /shard/task_2_1766017794_shard_1/complete HTTP/1.1" 200 -
+2025-12-18 00:30:03,474 - __main__ - INFO - Shard task_2_1766017794_shard_0 abgeschlossen: Erfolg
+2025-12-18 00:30:03,474 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:03] "POST /shard/task_2_1766017794_shard_0/complete HTTP/1.1" 200 -
+2025-12-18 00:30:04,177 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:30:04] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:04,178 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:30:04] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:04,182 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:30:04] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:04,183 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:30:04] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:04,187 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:30:04] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:04,195 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:30:04] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:04,199 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:30:04] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:04,199 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:30:04] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:04,201 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:30:04] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:04,202 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:30:04] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:04,203 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:30:04] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:04,208 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:04] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:04,210 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:30:04] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:04,229 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:04] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:06,429 - __main__ - INFO - Shard task_2_1766017794_shard_2 abgeschlossen: Erfolg
+2025-12-18 00:30:06,431 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:30:06] "POST /shard/task_2_1766017794_shard_2/complete HTTP/1.1" 200 -
+2025-12-18 00:30:06,435 - __main__ - INFO - Shard task_2_1766017794_shard_4 abgeschlossen: Erfolg
+2025-12-18 00:30:06,435 - __main__ - INFO - Task task_2_1766017794 vollständig abgeschlossen
+2025-12-18 00:30:06,436 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:30:06] "POST /shard/task_2_1766017794_shard_4/complete HTTP/1.1" 200 -
+2025-12-18 00:30:06,436 - __main__ - INFO - Shard task_2_1766017794_shard_3 abgeschlossen: Erfolg
+2025-12-18 00:30:06,436 - __main__ - INFO - Shard task_2_1766017794_shard_5 abgeschlossen: Erfolg
+2025-12-18 00:30:06,438 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:30:06] "POST /shard/task_2_1766017794_shard_3/complete HTTP/1.1" 200 -
+2025-12-18 00:30:06,439 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:30:06] "POST /shard/task_2_1766017794_shard_5/complete HTTP/1.1" 200 -
+2025-12-18 00:30:07,182 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:30:07] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:07,183 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:30:07] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:07,187 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:30:07] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:07,187 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:30:07] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:07,190 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:30:07] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:07,214 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:30:07] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:07,232 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:07] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:10,186 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:30:10] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:10,188 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:30:10] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:10,192 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:30:10] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:10,193 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:30:10] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:10,195 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:30:10] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:10,217 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:30:10] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:10,235 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:10] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:13,192 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:30:13] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:13,192 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:30:13] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:13,197 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:30:13] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:13,198 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:30:13] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:13,199 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:30:13] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:13,220 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:30:13] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:13,238 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:13] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:14,203 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:30:14] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:14,206 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:30:14] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:14,206 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:30:14] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:14,209 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:30:14] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:14,211 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:30:14] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:14,212 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:30:14] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:14,214 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:14] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:14,215 - __main__ - INFO - Erstelle 6 Shards für Task task_3_1766017814
+2025-12-18 00:30:14,219 - __main__ - INFO - Task task_3_1766017814 in 6 Shards aufgeteilt
+2025-12-18 00:30:14,219 - __main__ - INFO - Aufgabe eingereicht: task_3_1766017814 (Shardable: True)
+2025-12-18 00:30:14,220 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:30:14] "[35m[1mPOST /submit_task HTTP/1.1[0m" 201 -
+2025-12-18 00:30:14,223 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:30:14] "GET /task/task_1_1766017774 HTTP/1.1" 200 -
+2025-12-18 00:30:14,226 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:30:14] "GET /task/task_2_1766017794 HTTP/1.1" 200 -
+2025-12-18 00:30:14,229 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:30:14] "GET /task/task_3_1766017814 HTTP/1.1" 200 -
+2025-12-18 00:30:14,232 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:30:14] "GET /health HTTP/1.1" 200 -
+2025-12-18 00:30:14,234 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:30:14] "GET /hosts HTTP/1.1" 200 -
+2025-12-18 00:30:14,306 - __main__ - INFO - Shard task_3_1766017814_shard_0 zugewiesen an host_edge
+2025-12-18 00:30:14,807 - __main__ - INFO - Shard task_3_1766017814_shard_1 zugewiesen an host_edge
+2025-12-18 00:30:15,311 - __main__ - INFO - Shard task_3_1766017814_shard_2 zugewiesen an host_paris
+2025-12-18 00:30:15,816 - __main__ - INFO - Shard task_3_1766017814_shard_3 zugewiesen an host_paris
+2025-12-18 00:30:16,197 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:30:16] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:16,198 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:30:16] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:16,203 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:30:16] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:16,205 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:30:16] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:16,207 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:30:16] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:16,225 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:30:16] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:16,242 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:16] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:16,319 - __main__ - INFO - Shard task_3_1766017814_shard_4 zugewiesen an host_paris
+2025-12-18 00:30:16,821 - __main__ - INFO - Shard task_3_1766017814_shard_5 zugewiesen an host_paris
+2025-12-18 00:30:19,203 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:30:19] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:19,204 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:30:19] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:19,211 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:30:19] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:19,212 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:30:19] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:19,214 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:30:19] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:19,228 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:30:19] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:19,245 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:19] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:22,208 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:30:22] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:22,209 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:30:22] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:22,216 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:30:22] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:22,218 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:30:22] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:22,219 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:30:22] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:22,232 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:30:22] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:22,249 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:22] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:24,211 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:30:24] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:24,212 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:30:24] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:24,212 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:30:24] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:24,214 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:30:24] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:24,216 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:30:24] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:24,218 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:30:24] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:24,220 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:24] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:24,454 - __main__ - INFO - Shard task_3_1766017814_shard_0 abgeschlossen: Erfolg
+2025-12-18 00:30:24,455 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:30:24] "POST /shard/task_3_1766017814_shard_0/complete HTTP/1.1" 200 -
+2025-12-18 00:30:24,455 - __main__ - INFO - Shard task_3_1766017814_shard_1 abgeschlossen: Erfolg
+2025-12-18 00:30:24,456 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:30:24] "POST /shard/task_3_1766017814_shard_1/complete HTTP/1.1" 200 -
+2025-12-18 00:30:24,498 - __main__ - INFO - Shard task_3_1766017814_shard_2 abgeschlossen: Erfolg
+2025-12-18 00:30:24,498 - __main__ - INFO - Shard task_3_1766017814_shard_3 abgeschlossen: Erfolg
+2025-12-18 00:30:24,498 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:24] "POST /shard/task_3_1766017814_shard_2/complete HTTP/1.1" 200 -
+2025-12-18 00:30:24,499 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:24] "POST /shard/task_3_1766017814_shard_3/complete HTTP/1.1" 200 -
+2025-12-18 00:30:25,212 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:30:25] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:25,212 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:30:25] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:25,220 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:30:25] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:25,223 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:30:25] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:25,224 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:30:25] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:25,235 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:30:25] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:25,253 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:25] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:27,506 - __main__ - INFO - Task task_3_1766017814 vollständig abgeschlossen
+2025-12-18 00:30:27,506 - __main__ - INFO - Shard task_3_1766017814_shard_4 abgeschlossen: Erfolg
+2025-12-18 00:30:27,507 - __main__ - INFO - Shard task_3_1766017814_shard_5 abgeschlossen: Erfolg
+2025-12-18 00:30:27,508 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:27] "POST /shard/task_3_1766017814_shard_4/complete HTTP/1.1" 200 -
+2025-12-18 00:30:27,508 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:27] "POST /shard/task_3_1766017814_shard_5/complete HTTP/1.1" 200 -
+2025-12-18 00:30:28,214 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:30:28] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:28,215 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:30:28] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:28,221 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:30:28] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:28,225 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:30:28] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:28,226 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:30:28] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:28,237 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:30:28] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:28,254 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:28] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:31,220 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:30:31] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:31,221 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:30:31] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:31,226 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:30:31] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:31,230 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:30:31] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:31,231 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:30:31] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:31,241 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:30:31] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:31,257 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:31] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:34,218 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:30:34] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:34,219 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:30:34] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:34,219 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:30:34] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:34,221 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:30:34] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:34,223 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:30:34] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:34,225 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:30:34] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:34,226 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:34] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:34,227 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:30:34] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:34,234 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:30:34] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:34,235 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:30:34] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:34,237 - __main__ - INFO - Erstelle 4 Shards für Task task_4_1766017834
+2025-12-18 00:30:34,239 - __main__ - INFO - Task task_4_1766017834 in 4 Shards aufgeteilt
+2025-12-18 00:30:34,240 - __main__ - INFO - Aufgabe eingereicht: task_4_1766017834 (Shardable: True)
+2025-12-18 00:30:34,240 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:30:34] "[35m[1mPOST /submit_task HTTP/1.1[0m" 201 -
+2025-12-18 00:30:34,243 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:30:34] "GET /task/task_3_1766017814 HTTP/1.1" 200 -
+2025-12-18 00:30:34,244 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:30:34] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:34,248 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:30:34] "GET /task/task_4_1766017834 HTTP/1.1" 200 -
+2025-12-18 00:30:34,251 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:30:34] "GET /health HTTP/1.1" 200 -
+2025-12-18 00:30:34,254 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:30:34] "GET /hosts HTTP/1.1" 200 -
+2025-12-18 00:30:34,260 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:34] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:34,350 - __main__ - INFO - Shard task_4_1766017834_shard_0 zugewiesen an host_edge
+2025-12-18 00:30:34,853 - __main__ - INFO - Shard task_4_1766017834_shard_1 zugewiesen an host_edge
+2025-12-18 00:30:35,356 - __main__ - INFO - Shard task_4_1766017834_shard_2 zugewiesen an host_paris
+2025-12-18 00:30:35,859 - __main__ - INFO - Shard task_4_1766017834_shard_3 zugewiesen an host_paris
+2025-12-18 00:30:37,229 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:30:37] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:37,231 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:30:37] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:37,238 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:30:37] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:37,240 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:30:37] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:37,249 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:30:37] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:37,264 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:37] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:40,235 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:30:40] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:40,237 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:30:40] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:40,247 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:30:40] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:40,258 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:30:40] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:40,266 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:30:40] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:40,269 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:40] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:43,243 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:30:43] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:43,246 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:30:43] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:43,252 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:30:43] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:43,265 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:30:43] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:43,269 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:30:43] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:43,277 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:43] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:44,229 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:30:44] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:44,230 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:30:44] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:44,230 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:30:44] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:44,232 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:30:44] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:44,234 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:44] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:45,485 - __main__ - INFO - Shard task_4_1766017834_shard_0 abgeschlossen: Erfolg
+2025-12-18 00:30:45,485 - __main__ - INFO - Shard task_4_1766017834_shard_1 abgeschlossen: Erfolg
+2025-12-18 00:30:45,486 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:30:45] "POST /shard/task_4_1766017834_shard_0/complete HTTP/1.1" 200 -
+2025-12-18 00:30:45,486 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:30:45] "POST /shard/task_4_1766017834_shard_1/complete HTTP/1.1" 200 -
+2025-12-18 00:30:45,519 - __main__ - INFO - Task task_4_1766017834 vollständig abgeschlossen
+2025-12-18 00:30:45,520 - __main__ - INFO - Shard task_4_1766017834_shard_2 abgeschlossen: Erfolg
+2025-12-18 00:30:45,520 - __main__ - INFO - Shard task_4_1766017834_shard_3 abgeschlossen: Erfolg
+2025-12-18 00:30:45,521 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:45] "POST /shard/task_4_1766017834_shard_2/complete HTTP/1.1" 200 -
+2025-12-18 00:30:45,522 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:45] "POST /shard/task_4_1766017834_shard_3/complete HTTP/1.1" 200 -
+2025-12-18 00:30:46,251 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:30:46] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:46,258 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:30:46] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:46,270 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:30:46] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:46,274 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:30:46] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:46,282 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:46] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:49,255 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:30:49] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:49,261 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:30:49] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:49,274 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:30:49] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:49,278 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:30:49] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:49,286 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:49] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:52,258 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:30:52] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:52,265 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:30:52] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:52,278 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:30:52] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:52,281 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:30:52] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:52,290 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:52] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:54,245 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:30:54] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:54,246 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:30:54] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:54,246 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:30:54] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:54,247 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:54] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:54,248 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:30:54] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:30:54,260 - __main__ - INFO - Erstelle 7 Shards für Task task_5_1766017854
+2025-12-18 00:30:54,265 - __main__ - INFO - Task task_5_1766017854 in 7 Shards aufgeteilt
+2025-12-18 00:30:54,266 - __main__ - INFO - Aufgabe eingereicht: task_5_1766017854 (Shardable: True)
+2025-12-18 00:30:54,267 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:30:54] "[35m[1mPOST /submit_task HTTP/1.1[0m" 201 -
+2025-12-18 00:30:54,270 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:30:54] "GET /task/task_4_1766017834 HTTP/1.1" 200 -
+2025-12-18 00:30:54,273 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:30:54] "GET /task/task_5_1766017854 HTTP/1.1" 200 -
+2025-12-18 00:30:54,276 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:30:54] "GET /health HTTP/1.1" 200 -
+2025-12-18 00:30:54,279 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:30:54] "GET /hosts HTTP/1.1" 200 -
+2025-12-18 00:30:54,394 - __main__ - INFO - Shard task_5_1766017854_shard_0 zugewiesen an host_edge
+2025-12-18 00:30:54,896 - __main__ - INFO - Shard task_5_1766017854_shard_1 zugewiesen an host_paris
+2025-12-18 00:30:55,261 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:30:55] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:55,269 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:30:55] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:55,281 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:30:55] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:55,285 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:30:55] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:55,293 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:55] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:55,399 - __main__ - INFO - Shard task_5_1766017854_shard_2 zugewiesen an host_paris
+2025-12-18 00:30:55,901 - __main__ - INFO - Shard task_5_1766017854_shard_3 zugewiesen an host_paris
+2025-12-18 00:30:56,405 - __main__ - INFO - Shard task_5_1766017854_shard_4 zugewiesen an host_singapore
+2025-12-18 00:30:56,908 - __main__ - INFO - Shard task_5_1766017854_shard_5 zugewiesen an host_singapore
+2025-12-18 00:30:57,413 - __main__ - INFO - Shard task_5_1766017854_shard_6 zugewiesen an host_singapore
+2025-12-18 00:30:58,264 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:30:58] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:58,271 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:30:58] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:58,284 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:30:58] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:58,287 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:30:58] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:58,296 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:30:58] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:30:59,211 - __main__ - WARNING - Host host_sf nicht mehr erreichbar
+2025-12-18 00:31:01,267 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:31:01] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:01,275 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:31:01] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:01,289 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:01] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:01,291 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:31:01] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:01,301 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:01] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:04,260 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:04] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:31:04,261 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:31:04] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:31:04,262 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:31:04] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:31:04,264 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:04] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:31:04,282 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:31:04] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:04,294 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:04] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:04,295 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:31:04] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:04,305 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:04] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:04,726 - __main__ - INFO - Shard task_5_1766017854_shard_1 abgeschlossen: Erfolg
+2025-12-18 00:31:04,727 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:04] "POST /shard/task_5_1766017854_shard_1/complete HTTP/1.1" 200 -
+2025-12-18 00:31:07,288 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:31:07] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:07,300 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:07] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:07,302 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:31:07] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:07,312 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:07] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:07,732 - __main__ - INFO - Shard task_5_1766017854_shard_4 abgeschlossen: Erfolg
+2025-12-18 00:31:07,733 - __main__ - INFO - Shard task_5_1766017854_shard_5 abgeschlossen: Erfolg
+2025-12-18 00:31:07,735 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:07] "POST /shard/task_5_1766017854_shard_4/complete HTTP/1.1" 200 -
+2025-12-18 00:31:07,735 - __main__ - INFO - Shard task_5_1766017854_shard_6 abgeschlossen: Erfolg
+2025-12-18 00:31:07,736 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:07] "POST /shard/task_5_1766017854_shard_5/complete HTTP/1.1" 200 -
+2025-12-18 00:31:07,736 - __main__ - INFO - Shard task_5_1766017854_shard_3 abgeschlossen: Erfolg
+2025-12-18 00:31:07,736 - __main__ - INFO - Shard task_5_1766017854_shard_2 abgeschlossen: Erfolg
+2025-12-18 00:31:07,737 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:07] "POST /shard/task_5_1766017854_shard_6/complete HTTP/1.1" 200 -
+2025-12-18 00:31:07,739 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:07] "POST /shard/task_5_1766017854_shard_3/complete HTTP/1.1" 200 -
+2025-12-18 00:31:07,740 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:07] "POST /shard/task_5_1766017854_shard_2/complete HTTP/1.1" 200 -
+2025-12-18 00:31:09,218 - __main__ - WARNING - Host host_edge nicht mehr erreichbar
+2025-12-18 00:31:09,223 - __main__ - INFO - Shard task_5_1766017854_shard_0 wird neu zugewiesen (Host host_edge ausgefallen)
+2025-12-18 00:31:09,436 - __main__ - INFO - Shard task_5_1766017854_shard_0 zugewiesen an host_paris
+2025-12-18 00:31:10,292 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:31:10] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:10,305 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:10] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:10,306 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:31:10] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:10,317 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:10] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:13,295 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:31:13] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:13,309 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:13] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:13,310 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:31:13] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:13,320 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:13] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:14,271 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:14] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:31:14,271 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:31:14] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:31:14,272 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:31:14] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:31:14,276 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:14] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:31:14,281 - __main__ - INFO - Erstelle 4 Shards für Task task_6_1766017874
+2025-12-18 00:31:14,284 - __main__ - INFO - Task task_6_1766017874 in 4 Shards aufgeteilt
+2025-12-18 00:31:14,285 - __main__ - INFO - Aufgabe eingereicht: task_6_1766017874 (Shardable: True)
+2025-12-18 00:31:14,285 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:31:14] "[35m[1mPOST /submit_task HTTP/1.1[0m" 201 -
+2025-12-18 00:31:14,289 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:31:14] "GET /task/task_5_1766017854 HTTP/1.1" 200 -
+2025-12-18 00:31:14,293 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:31:14] "GET /task/task_6_1766017874 HTTP/1.1" 200 -
+2025-12-18 00:31:14,297 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:31:14] "GET /health HTTP/1.1" 200 -
+2025-12-18 00:31:14,300 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:31:14] "GET /hosts HTTP/1.1" 200 -
+2025-12-18 00:31:14,444 - __main__ - INFO - Shard task_6_1766017874_shard_0 zugewiesen an host_paris
+2025-12-18 00:31:14,946 - __main__ - INFO - Shard task_6_1766017874_shard_1 zugewiesen an host_paris
+2025-12-18 00:31:15,450 - __main__ - INFO - Shard task_6_1766017874_shard_2 zugewiesen an host_singapore
+2025-12-18 00:31:15,952 - __main__ - INFO - Shard task_6_1766017874_shard_3 zugewiesen an host_singapore
+2025-12-18 00:31:16,298 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:31:16] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:16,313 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:16] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:16,314 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:31:16] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:16,324 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:16] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:19,302 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:31:19] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:19,318 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:31:19] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:19,319 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:19] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:19,328 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:19] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:19,754 - __main__ - INFO - Task task_5_1766017854 vollständig abgeschlossen
+2025-12-18 00:31:19,754 - __main__ - INFO - Shard task_5_1766017854_shard_0 abgeschlossen: Erfolg
+2025-12-18 00:31:19,755 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:19] "POST /shard/task_5_1766017854_shard_0/complete HTTP/1.1" 200 -
+2025-12-18 00:31:21,220 - __main__ - INFO - Host registriert: host_sf (SF-01) in north_america
+2025-12-18 00:31:21,221 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:31:21] "POST /register HTTP/1.1" 200 -
+2025-12-18 00:31:21,224 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:31:21] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:31:22,233 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:31:22] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:22,305 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:31:22] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:22,321 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:31:22] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:22,322 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:22] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:22,331 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:22] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:24,276 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:24] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:31:24,278 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:31:24] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:31:24,279 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:31:24] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:31:24,282 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:24] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:31:24,569 - __main__ - INFO - Shard task_6_1766017874_shard_2 abgeschlossen: Erfolg
+2025-12-18 00:31:24,569 - __main__ - INFO - Shard task_6_1766017874_shard_3 abgeschlossen: Erfolg
+2025-12-18 00:31:24,570 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:24] "POST /shard/task_6_1766017874_shard_2/complete HTTP/1.1" 200 -
+2025-12-18 00:31:24,570 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:24] "POST /shard/task_6_1766017874_shard_3/complete HTTP/1.1" 200 -
+2025-12-18 00:31:24,579 - __main__ - INFO - Task task_6_1766017874 vollständig abgeschlossen
+2025-12-18 00:31:24,580 - __main__ - INFO - Shard task_6_1766017874_shard_0 abgeschlossen: Erfolg
+2025-12-18 00:31:24,580 - __main__ - INFO - Shard task_6_1766017874_shard_1 abgeschlossen: Erfolg
+2025-12-18 00:31:24,581 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:24] "POST /shard/task_6_1766017874_shard_0/complete HTTP/1.1" 200 -
+2025-12-18 00:31:24,582 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:24] "POST /shard/task_6_1766017874_shard_1/complete HTTP/1.1" 200 -
+2025-12-18 00:31:25,238 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:31:25] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:25,308 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:31:25] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:25,325 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:31:25] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:25,326 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:25] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:25,334 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:25] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:28,240 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:31:28] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:28,310 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:31:28] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:28,328 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:31:28] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:28,330 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:28] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:28,337 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:28] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:29,223 - __main__ - WARNING - Host host_berlin nicht mehr erreichbar
+2025-12-18 00:31:31,230 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:31:31] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:31:31,244 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:31:31] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:31,313 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:31:31] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:31,335 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:31:31] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:31,336 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:31] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:31,340 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:31] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:34,248 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:31:34] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:34,284 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:34] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:31:34,285 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:31:34] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:31:34,285 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:31:34] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:31:34,285 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:34] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:31:34,303 - __main__ - INFO - Erstelle 5 Shards für Task task_7_1766017894
+2025-12-18 00:31:34,305 - __main__ - INFO - Task task_7_1766017894 in 5 Shards aufgeteilt
+2025-12-18 00:31:34,306 - __main__ - INFO - Aufgabe eingereicht: task_7_1766017894 (Shardable: True)
+2025-12-18 00:31:34,307 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:31:34] "[35m[1mPOST /submit_task HTTP/1.1[0m" 201 -
+2025-12-18 00:31:34,309 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:31:34] "GET /task/task_5_1766017854 HTTP/1.1" 200 -
+2025-12-18 00:31:34,312 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:31:34] "GET /task/task_6_1766017874 HTTP/1.1" 200 -
+2025-12-18 00:31:34,315 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:31:34] "GET /task/task_7_1766017894 HTTP/1.1" 200 -
+2025-12-18 00:31:34,316 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:31:34] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:34,319 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:31:34] "GET /health HTTP/1.1" 200 -
+2025-12-18 00:31:34,323 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:31:34] "GET /hosts HTTP/1.1" 200 -
+2025-12-18 00:31:34,338 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:31:34] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:34,339 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:34] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:34,343 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:34] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:34,479 - __main__ - INFO - Shard task_7_1766017894_shard_0 zugewiesen an host_paris
+2025-12-18 00:31:34,981 - __main__ - INFO - Shard task_7_1766017894_shard_1 zugewiesen an host_paris
+2025-12-18 00:31:35,485 - __main__ - INFO - Shard task_7_1766017894_shard_2 zugewiesen an host_paris
+2025-12-18 00:31:35,987 - __main__ - INFO - Shard task_7_1766017894_shard_3 zugewiesen an host_singapore
+2025-12-18 00:31:36,488 - __main__ - INFO - Shard task_7_1766017894_shard_4 zugewiesen an host_singapore
+2025-12-18 00:31:37,251 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:31:37] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:37,321 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:31:37] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:37,342 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:31:37] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:37,343 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:37] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:37,346 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:37] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:40,255 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:31:40] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:40,325 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:31:40] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:40,346 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:31:40] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:40,347 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:40] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:40,351 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:40] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:41,238 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:31:41] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:31:43,258 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:31:43] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:43,328 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:31:43] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:43,350 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:31:43] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:43,351 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:43] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:43,354 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:43] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:44,293 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:44] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:31:44,293 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:44] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:31:44,293 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:31:44] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:31:44,294 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:31:44] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:31:46,261 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:31:46] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:46,332 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:31:46] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:46,354 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:31:46] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:46,355 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:46] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:46,357 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:46] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:47,267 - __main__ - INFO - Shard task_7_1766017894_shard_3 abgeschlossen: Erfolg
+2025-12-18 00:31:47,268 - __main__ - INFO - Task task_7_1766017894 vollständig abgeschlossen
+2025-12-18 00:31:47,267 - __main__ - INFO - Shard task_7_1766017894_shard_0 abgeschlossen: Erfolg
+2025-12-18 00:31:47,268 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:47] "POST /shard/task_7_1766017894_shard_3/complete HTTP/1.1" 200 -
+2025-12-18 00:31:47,268 - __main__ - INFO - Shard task_7_1766017894_shard_2 abgeschlossen: Erfolg
+2025-12-18 00:31:47,268 - __main__ - INFO - Shard task_7_1766017894_shard_4 abgeschlossen: Erfolg
+2025-12-18 00:31:47,269 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:47] "POST /shard/task_7_1766017894_shard_0/complete HTTP/1.1" 200 -
+2025-12-18 00:31:47,269 - __main__ - INFO - Shard task_7_1766017894_shard_1 abgeschlossen: Erfolg
+2025-12-18 00:31:47,270 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:47] "POST /shard/task_7_1766017894_shard_2/complete HTTP/1.1" 200 -
+2025-12-18 00:31:47,271 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:47] "POST /shard/task_7_1766017894_shard_4/complete HTTP/1.1" 200 -
+2025-12-18 00:31:47,272 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:47] "POST /shard/task_7_1766017894_shard_1/complete HTTP/1.1" 200 -
+2025-12-18 00:31:49,265 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:31:49] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:49,336 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:31:49] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:49,358 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:31:49] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:49,359 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:49] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:49,361 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:49] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:51,245 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:31:51] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:31:52,268 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:31:52] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:52,339 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:31:52] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:52,362 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:31:52] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:52,364 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:52] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:52,365 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:52] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:54,303 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:54] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:31:54,303 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:54] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:31:54,303 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:31:54] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:31:54,304 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:31:54] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:31:54,327 - __main__ - INFO - Erstelle 5 Shards für Task task_8_1766017914
+2025-12-18 00:31:54,329 - __main__ - INFO - Task task_8_1766017914 in 5 Shards aufgeteilt
+2025-12-18 00:31:54,330 - __main__ - INFO - Aufgabe eingereicht: task_8_1766017914 (Shardable: True)
+2025-12-18 00:31:54,330 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:31:54] "[35m[1mPOST /submit_task HTTP/1.1[0m" 201 -
+2025-12-18 00:31:54,334 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:31:54] "GET /task/task_7_1766017894 HTTP/1.1" 200 -
+2025-12-18 00:31:54,338 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:31:54] "GET /task/task_8_1766017914 HTTP/1.1" 200 -
+2025-12-18 00:31:54,341 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:31:54] "GET /health HTTP/1.1" 200 -
+2025-12-18 00:31:54,344 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:31:54] "GET /hosts HTTP/1.1" 200 -
+2025-12-18 00:31:54,515 - __main__ - INFO - Shard task_8_1766017914_shard_0 zugewiesen an host_paris
+2025-12-18 00:31:55,017 - __main__ - INFO - Shard task_8_1766017914_shard_1 zugewiesen an host_paris
+2025-12-18 00:31:55,271 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:31:55] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:55,343 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:31:55] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:55,365 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:31:55] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:55,368 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:55] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:55,369 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:55] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:55,520 - __main__ - INFO - Shard task_8_1766017914_shard_2 zugewiesen an host_paris
+2025-12-18 00:31:56,021 - __main__ - INFO - Shard task_8_1766017914_shard_3 zugewiesen an host_singapore
+2025-12-18 00:31:56,524 - __main__ - INFO - Shard task_8_1766017914_shard_4 zugewiesen an host_singapore
+2025-12-18 00:31:58,274 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:31:58] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:58,346 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:31:58] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:58,368 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:31:58] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:58,371 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:31:58] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:31:58,373 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:31:58] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:01,248 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:32:01] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:01,278 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:32:01] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:01,349 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:32:01] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:01,371 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:32:01] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:01,375 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:32:01] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:01,377 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:32:01] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:03,229 - __main__ - INFO - Host registriert: host_edge (Edge-01) in europe
+2025-12-18 00:32:03,230 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:32:03] "POST /register HTTP/1.1" 200 -
+2025-12-18 00:32:03,235 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:32:03] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:04,248 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:32:04] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:04,255 - __main__ - INFO - Host registriert: host_berlin (Berlin-01) in europe
+2025-12-18 00:32:04,255 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:32:04] "POST /register HTTP/1.1" 200 -
+2025-12-18 00:32:04,259 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:32:04] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:04,272 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:32:04] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:04,281 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:32:04] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:04,307 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:32:04] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:04,308 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:32:04] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:04,309 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:32:04] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:04,309 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:32:04] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:04,352 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:32:04] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:04,375 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:32:04] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:04,380 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:32:04] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:04,381 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:32:04] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:05,275 - __main__ - INFO - Shard task_8_1766017914_shard_0 abgeschlossen: Erfolg
+2025-12-18 00:32:05,276 - __main__ - INFO - Shard task_8_1766017914_shard_1 abgeschlossen: Erfolg
+2025-12-18 00:32:05,276 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:32:05] "POST /shard/task_8_1766017914_shard_0/complete HTTP/1.1" 200 -
+2025-12-18 00:32:05,276 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:32:05] "POST /shard/task_8_1766017914_shard_1/complete HTTP/1.1" 200 -
+2025-12-18 00:32:07,251 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:32:07] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:07,275 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:32:07] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:07,284 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:32:07] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:07,355 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:32:07] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:07,378 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:32:07] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:07,384 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:32:07] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:07,385 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:32:07] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:08,277 - __main__ - INFO - Shard task_8_1766017914_shard_2 abgeschlossen: Erfolg
+2025-12-18 00:32:08,278 - __main__ - INFO - Task task_8_1766017914 vollständig abgeschlossen
+2025-12-18 00:32:08,278 - __main__ - INFO - Shard task_8_1766017914_shard_4 abgeschlossen: Erfolg
+2025-12-18 00:32:08,278 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:32:08] "POST /shard/task_8_1766017914_shard_2/complete HTTP/1.1" 200 -
+2025-12-18 00:32:08,279 - __main__ - INFO - Shard task_8_1766017914_shard_3 abgeschlossen: Erfolg
+2025-12-18 00:32:08,279 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:32:08] "POST /shard/task_8_1766017914_shard_4/complete HTTP/1.1" 200 -
+2025-12-18 00:32:08,280 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:32:08] "POST /shard/task_8_1766017914_shard_3/complete HTTP/1.1" 200 -
+2025-12-18 00:32:10,255 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:32:10] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:10,278 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:32:10] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:10,288 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:32:10] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:10,359 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:32:10] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:10,382 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:32:10] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:10,388 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:32:10] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:10,389 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:32:10] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:11,256 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:32:11] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:11,333 - werkzeug - INFO - 172.18.0.1 - - [18/Dec/2025 00:32:11] "[33mGET / HTTP/1.1[0m" 404 -
+2025-12-18 00:32:11,401 - werkzeug - INFO - 172.18.0.1 - - [18/Dec/2025 00:32:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-12-18 00:32:13,243 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:32:13] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:13,260 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:32:13] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:13,282 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:32:13] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:13,291 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:32:13] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:13,369 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:32:13] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:13,386 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:32:13] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:13,393 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:32:13] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:13,394 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:32:13] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:14,325 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:32:14] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:14,325 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:32:14] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:14,326 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:32:14] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:14,326 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:32:14] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:14,347 - __main__ - INFO - Aufgabe eingereicht: task_9_1766017934 (Shardable: False)
+2025-12-18 00:32:14,348 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:32:14] "[35m[1mPOST /submit_task HTTP/1.1[0m" 201 -
+2025-12-18 00:32:14,351 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:32:14] "GET /task/task_8_1766017914 HTTP/1.1" 200 -
+2025-12-18 00:32:14,355 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:32:14] "GET /task/task_9_1766017934 HTTP/1.1" 200 -
+2025-12-18 00:32:14,358 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:32:14] "GET /health HTTP/1.1" 200 -
+2025-12-18 00:32:14,362 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:32:14] "GET /hosts HTTP/1.1" 200 -
+2025-12-18 00:32:16,265 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:32:16] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:16,288 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:32:16] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:16,296 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:32:16] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:16,373 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:32:16] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:16,389 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:32:16] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:16,398 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:32:16] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:19,270 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:32:19] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:19,292 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:32:19] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:19,302 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:32:19] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:19,377 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:32:19] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:19,393 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:32:19] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:19,401 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:32:19] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:21,261 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:32:21] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:22,274 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:32:22] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:22,295 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:32:22] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:22,305 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:32:22] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:22,380 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:32:22] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:22,397 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:32:22] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:22,405 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:32:22] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:23,253 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:32:23] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:24,334 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:32:24] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:24,334 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:32:24] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:24,334 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:32:24] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:24,335 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:32:24] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:25,277 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:32:25] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:25,299 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:32:25] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:25,309 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:32:25] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:25,384 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:32:25] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:25,400 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:32:25] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:25,409 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:32:25] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:28,278 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:32:28] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:28,301 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:32:28] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:28,310 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:32:28] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:28,386 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:32:28] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:28,402 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:32:28] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:28,410 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:32:28] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:31,265 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:32:31] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:31,282 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:32:31] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:31,304 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:32:31] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:31,314 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:32:31] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:31,389 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:32:31] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:31,405 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:32:31] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:31,414 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:32:31] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:33,256 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:32:33] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:34,285 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:32:34] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:34,308 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:32:34] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:34,317 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:32:34] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:34,340 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:32:34] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:34,341 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:32:34] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:34,341 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:32:34] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:34,341 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:32:34] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:34,369 - __main__ - INFO - Aufgabe eingereicht: task_10_1766017954 (Shardable: False)
+2025-12-18 00:32:34,370 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:32:34] "[35m[1mPOST /submit_task HTTP/1.1[0m" 201 -
+2025-12-18 00:32:34,373 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:32:34] "GET /task/task_9_1766017934 HTTP/1.1" 200 -
+2025-12-18 00:32:34,376 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:32:34] "GET /task/task_10_1766017954 HTTP/1.1" 200 -
+2025-12-18 00:32:34,379 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:32:34] "GET /health HTTP/1.1" 200 -
+2025-12-18 00:32:34,382 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:32:34] "GET /hosts HTTP/1.1" 200 -
+2025-12-18 00:32:34,393 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:32:34] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:34,408 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:32:34] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:34,417 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:32:34] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:37,289 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:32:37] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:37,312 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:32:37] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:37,321 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:32:37] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:37,397 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:32:37] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:37,412 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:32:37] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:37,421 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:32:37] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:39,226 - __main__ - WARNING - Host host_paris nicht mehr erreichbar
+2025-12-18 00:32:40,294 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:32:40] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:40,315 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:32:40] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:40,324 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:32:40] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:40,400 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:32:40] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:40,415 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:32:40] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:40,424 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:32:40] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:41,269 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:32:41] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:43,319 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:32:43] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:43,328 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:32:43] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:43,403 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:32:43] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:43,418 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:32:43] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:43,428 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:32:43] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:44,350 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:32:44] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:44,350 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:32:44] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:44,350 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:32:44] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:46,322 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:32:46] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:46,331 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:32:46] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:46,406 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:32:46] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:46,421 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:32:46] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:49,326 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:32:49] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:49,335 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:32:49] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:49,409 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:32:49] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:49,425 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:32:49] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:51,277 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:32:51] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:52,330 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:32:52] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:52,338 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:32:52] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:52,413 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:32:52] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:52,428 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:32:52] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:54,354 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:32:54] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:54,355 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:32:54] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:54,356 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:32:54] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:54,389 - __main__ - INFO - Erstelle 6 Shards für Task task_11_1766017974
+2025-12-18 00:32:54,391 - __main__ - INFO - Task task_11_1766017974 in 6 Shards aufgeteilt
+2025-12-18 00:32:54,392 - __main__ - INFO - Aufgabe eingereicht: task_11_1766017974 (Shardable: True)
+2025-12-18 00:32:54,393 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:32:54] "[35m[1mPOST /submit_task HTTP/1.1[0m" 201 -
+2025-12-18 00:32:54,396 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:32:54] "GET /task/task_9_1766017934 HTTP/1.1" 200 -
+2025-12-18 00:32:54,399 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:32:54] "GET /task/task_10_1766017954 HTTP/1.1" 200 -
+2025-12-18 00:32:54,402 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:32:54] "GET /task/task_11_1766017974 HTTP/1.1" 200 -
+2025-12-18 00:32:54,405 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:32:54] "GET /health HTTP/1.1" 200 -
+2025-12-18 00:32:54,408 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:32:54] "GET /hosts HTTP/1.1" 200 -
+2025-12-18 00:32:54,605 - __main__ - INFO - Shard task_11_1766017974_shard_0 zugewiesen an host_edge
+2025-12-18 00:32:55,107 - __main__ - INFO - Shard task_11_1766017974_shard_1 zugewiesen an host_edge
+2025-12-18 00:32:55,310 - __main__ - INFO - Host registriert: host_paris (Paris-01) in europe
+2025-12-18 00:32:55,311 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:32:55] "POST /register HTTP/1.1" 200 -
+2025-12-18 00:32:55,315 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:32:55] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:32:55,334 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:32:55] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:55,342 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:32:55] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:55,399 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:32:55] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:55,416 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:32:55] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:55,431 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:32:55] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:55,610 - __main__ - INFO - Shard task_11_1766017974_shard_2 zugewiesen an host_paris
+2025-12-18 00:32:56,111 - __main__ - INFO - Shard task_11_1766017974_shard_3 zugewiesen an host_paris
+2025-12-18 00:32:56,623 - __main__ - INFO - Shard task_11_1766017974_shard_4 zugewiesen an host_paris
+2025-12-18 00:32:57,124 - __main__ - INFO - Shard task_11_1766017974_shard_5 zugewiesen an host_paris
+2025-12-18 00:32:58,337 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:32:58] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:58,345 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:32:58] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:58,402 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:32:58] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:58,419 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:32:58] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:32:58,434 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:32:58] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:01,281 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:33:01] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:33:01,340 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:33:01] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:01,349 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:33:01] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:01,407 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:33:01] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:01,422 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:33:01] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:01,438 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:33:01] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:04,343 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:33:04] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:04,352 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:33:04] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:04,365 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:33:04] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:33:04,365 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:33:04] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:33:04,366 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:33:04] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:33:04,410 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:33:04] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:04,425 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:33:04] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:04,441 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:33:04] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:05,318 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:33:05] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:33:06,260 - __main__ - INFO - Host registriert: host_edge (Edge-01) in europe
+2025-12-18 00:33:06,260 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:33:06] "POST /register HTTP/1.1" 200 -
+2025-12-18 00:33:06,264 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:33:06] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:33:06,661 - __main__ - INFO - Shard task_11_1766017974_shard_2 abgeschlossen: Erfolg
+2025-12-18 00:33:06,662 - __main__ - INFO - Shard task_11_1766017974_shard_4 abgeschlossen: Erfolg
+2025-12-18 00:33:06,662 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:33:06] "POST /shard/task_11_1766017974_shard_2/complete HTTP/1.1" 200 -
+2025-12-18 00:33:06,663 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:33:06] "POST /shard/task_11_1766017974_shard_4/complete HTTP/1.1" 200 -
+2025-12-18 00:33:06,663 - __main__ - INFO - Shard task_11_1766017974_shard_3 abgeschlossen: Erfolg
+2025-12-18 00:33:06,663 - __main__ - INFO - Shard task_11_1766017974_shard_5 abgeschlossen: Erfolg
+2025-12-18 00:33:06,665 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:33:06] "POST /shard/task_11_1766017974_shard_3/complete HTTP/1.1" 200 -
+2025-12-18 00:33:06,666 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:33:06] "POST /shard/task_11_1766017974_shard_5/complete HTTP/1.1" 200 -
+2025-12-18 00:33:07,297 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:33:07] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:07,346 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:33:07] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:07,355 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:33:07] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:07,413 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:33:07] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:07,429 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:33:07] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:07,444 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:33:07] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:08,346 - __main__ - INFO - Host registriert: host_singapore (Singapore-01) in asia
+2025-12-18 00:33:08,347 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:33:08] "POST /register HTTP/1.1" 200 -
+2025-12-18 00:33:08,350 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:33:08] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:33:10,301 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:33:10] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:10,350 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:33:10] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:10,359 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:33:10] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:10,417 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:33:10] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:10,432 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:33:10] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:10,433 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:33:10] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:10,448 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:33:10] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:11,286 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:33:11] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:33:13,305 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:33:13] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:13,353 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:33:13] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:13,362 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:33:13] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:13,421 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:33:13] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:13,437 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:33:13] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:13,438 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:33:13] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:13,451 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:33:13] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:14,374 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:33:14] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:33:14,374 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:33:14] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:33:14,374 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:33:14] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:33:14,412 - __main__ - INFO - Erstelle 6 Shards für Task task_12_1766017994
+2025-12-18 00:33:14,415 - __main__ - INFO - Task task_12_1766017994 in 6 Shards aufgeteilt
+2025-12-18 00:33:14,415 - __main__ - INFO - Aufgabe eingereicht: task_12_1766017994 (Shardable: True)
+2025-12-18 00:33:14,416 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:33:14] "[35m[1mPOST /submit_task HTTP/1.1[0m" 201 -
+2025-12-18 00:33:14,419 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:33:14] "GET /task/task_9_1766017934 HTTP/1.1" 200 -
+2025-12-18 00:33:14,421 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:33:14] "GET /task/task_10_1766017954 HTTP/1.1" 200 -
+2025-12-18 00:33:14,424 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:33:14] "GET /task/task_11_1766017974 HTTP/1.1" 200 -
+2025-12-18 00:33:14,428 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:33:14] "GET /task/task_12_1766017994 HTTP/1.1" 200 -
+2025-12-18 00:33:14,430 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:33:14] "GET /health HTTP/1.1" 200 -
+2025-12-18 00:33:14,433 - werkzeug - INFO - 172.18.0.12 - - [18/Dec/2025 00:33:14] "GET /hosts HTTP/1.1" 200 -
+2025-12-18 00:33:14,649 - __main__ - INFO - Shard task_12_1766017994_shard_0 zugewiesen an host_edge
+2025-12-18 00:33:15,151 - __main__ - INFO - Shard task_12_1766017994_shard_1 zugewiesen an host_edge
+2025-12-18 00:33:15,321 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:33:15] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:33:15,554 - __main__ - INFO - Task task_11_1766017974 vollständig abgeschlossen
+2025-12-18 00:33:15,554 - __main__ - INFO - Shard task_11_1766017974_shard_0 abgeschlossen: Erfolg
+2025-12-18 00:33:15,554 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:33:15] "POST /shard/task_11_1766017974_shard_0/complete HTTP/1.1" 200 -
+2025-12-18 00:33:15,555 - __main__ - INFO - Shard task_11_1766017974_shard_1 abgeschlossen: Erfolg
+2025-12-18 00:33:15,555 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:33:15] "POST /shard/task_11_1766017974_shard_1/complete HTTP/1.1" 200 -
+2025-12-18 00:33:15,652 - __main__ - INFO - Shard task_12_1766017994_shard_2 zugewiesen an host_edge
+2025-12-18 00:33:16,154 - __main__ - INFO - Shard task_12_1766017994_shard_3 zugewiesen an host_edge
+2025-12-18 00:33:16,267 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:33:16] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:33:16,308 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:33:16] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:16,357 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:33:16] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:16,366 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:33:16] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:16,424 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:33:16] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:16,440 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:33:16] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:16,441 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:33:16] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:16,455 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:33:16] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:16,657 - __main__ - INFO - Shard task_12_1766017994_shard_4 zugewiesen an host_edge
+2025-12-18 00:33:17,159 - __main__ - INFO - Shard task_12_1766017994_shard_5 zugewiesen an host_edge
+2025-12-18 00:33:18,355 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:33:18] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:33:19,313 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:33:19] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:19,360 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:33:19] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:19,370 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:33:19] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:19,427 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:33:19] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:19,444 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:33:19] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:19,445 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:33:19] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:19,458 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:33:19] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:21,291 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:33:21] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:33:22,316 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:33:22] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:22,364 - werkzeug - INFO - 172.18.0.8 - - [18/Dec/2025 00:33:22] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:22,373 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:33:22] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:22,431 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:33:22] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:22,449 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:33:22] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:22,450 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:33:22] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:22,462 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:33:22] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:24,382 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:33:24] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:33:24,382 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:33:24] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:33:24,567 - __main__ - INFO - Shard task_12_1766017994_shard_1 abgeschlossen: Erfolg
+2025-12-18 00:33:24,567 - __main__ - INFO - Shard task_12_1766017994_shard_0 abgeschlossen: Erfolg
+2025-12-18 00:33:24,567 - __main__ - INFO - Shard task_12_1766017994_shard_2 abgeschlossen: Erfolg
+2025-12-18 00:33:24,568 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:33:24] "POST /shard/task_12_1766017994_shard_1/complete HTTP/1.1" 200 -
+2025-12-18 00:33:24,568 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:33:24] "POST /shard/task_12_1766017994_shard_0/complete HTTP/1.1" 200 -
+2025-12-18 00:33:24,569 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:33:24] "POST /shard/task_12_1766017994_shard_2/complete HTTP/1.1" 200 -
+2025-12-18 00:33:25,320 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:33:25] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:25,325 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:33:25] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:33:25,377 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:33:25] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:25,434 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:33:25] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:25,454 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:33:25] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:25,454 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:33:25] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:25,465 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:33:25] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:26,273 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:33:26] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:33:28,323 - werkzeug - INFO - 172.18.0.10 - - [18/Dec/2025 00:33:28] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:28,359 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:33:28] "POST /heartbeat HTTP/1.1" 200 -
+2025-12-18 00:33:28,379 - werkzeug - INFO - 172.18.0.9 - - [18/Dec/2025 00:33:28] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:28,436 - werkzeug - INFO - 172.18.0.13 - - [18/Dec/2025 00:33:28] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:28,457 - werkzeug - INFO - 172.18.0.7 - - [18/Dec/2025 00:33:28] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:28,458 - werkzeug - INFO - 172.18.0.6 - - [18/Dec/2025 00:33:28] "GET /shards HTTP/1.1" 200 -
+2025-12-18 00:33:28,467 - werkzeug - INFO - 172.18.0.11 - - [18/Dec/2025 00:33:28] "GET /shards HTTP/1.1" 200 -
