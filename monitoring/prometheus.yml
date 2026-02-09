@@ -2,26 +2,22 @@ global:
   scrape_interval: 15s
   evaluation_interval: 15s
   external_labels:
-    cluster: 'cloud-resource-broker'
+    cluster: 'resource-broker-system'
     environment: 'production'
 
-alerting:
-  alertmanagers:
-    - static_configs:
-        - targets: []
-
-rule_files:
-  - '/etc/prometheus/alerts/*.yml'
 
 scrape_configs:
+
+
   - job_name: 'middleman'
     static_configs:
       - targets: ['middleman:5000']
         labels:
-          service: 'resource-broker'
-          component: 'middleman'
+          service: 'resource_broker'
+          component: 'coordinator'
     metrics_path: '/metrics'
     scrape_interval: 10s
+    scrape_timeout: 5s
 
   - job_name: 'prometheus'
     static_configs:
@@ -30,17 +26,3 @@ scrape_configs:
           service: 'monitoring'
           component: 'prometheus'
 
-  - job_name: 'hosts'
-    static_configs:
-      - targets:
-          - 'host_berlin:8001'
-          - 'host_paris:8001'
-          - 'host_nyc:8001'
-          - 'host_sf:8001'
-          - 'host_tokyo:8001'
-          - 'host_singapore:8001'
-          - 'host_edge:8001'
-        labels:
-          service: 'compute-hosts'
-    metrics_path: '/metrics'
-    scrape_interval: 10s

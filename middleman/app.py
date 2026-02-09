@@ -1,16 +1,15 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, Response
 import redis
 import json
 import time
 import threading
 from datetime import datetime, timedelta
-from prometheus_client import Counter, Gauge, Histogram, Summary, Info, generate_latest, REGISTRY
+from prometheus_client import Counter, Gauge, Histogram, Summary, Info, generate_latest, REGISTRY, CONTENT_TYPE_LATEST
 import logging
 import os
 import random
 from collections import defaultdict
 
-# Logging Setup
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -23,16 +22,14 @@ logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
 
-# Redis Connection
 redis_client = redis.Redis(
     host=os.getenv('REDIS_HOST', 'redis'),
     port=int(os.getenv('REDIS_PORT', 6379)),
     decode_responses=True
 )
 
-# ===== PROMETHEUS METRIKEN =====
 
-# Basis-Zähler
+# Basiszähler
 host_registrations = Counter('host_registrations_total', 'Total host registrations')
 task_submissions = Counter('task_submissions_total', 'Total task submissions', ['task_type'])
 task_completions = Counter('task_completions_total', 'Total task completions', ['status'])
@@ -40,21 +37,21 @@ task_assignments = Counter('task_assignments_total', 'Total task assignments')
 shard_creations = Counter('task_shards_created_total', 'Total task shards created')
 shard_completions = Counter('shard_completions_total', 'Total shard completions', ['status'])
 
-# Gauges für aktuelle Zustände
+#  aktuelle Zustände gauge
 active_hosts = Gauge('active_hosts', 'Number of active hosts', ['location'])
 pending_tasks = Gauge('pending_tasks', 'Number of pending tasks')
 pending_shards = Gauge('pending_shards', 'Number of pending shards')
 running_shards = Gauge('running_shards', 'Number of running shards')
 active_shards_per_host = Gauge('active_shards_per_host', 'Active shards per host', ['host_id', 'location'])
 
-# Ressourcen-Metriken
+# metriken nach ressource
 resource_capacity = Gauge('resource_capacity', 'Total resource capacity', ['resource_type', 'location'])
 resource_used = Gauge('resource_used', 'Used resources', ['resource_type', 'location'])
 resource_available = Gauge('resource_available', 'Available resources', ['resource_type', 'location'])
 resource_utilization = Gauge('resource_utilization_percent', 'Resource utilization percentage',
                              ['resource_type', 'location'])
 
-# Host-spezifische Metriken
+#  Metriken pro host
 host_cpu_capacity = Gauge('host_cpu_capacity', 'CPU capacity per host', ['host_id', 'location'])
 host_cpu_used = Gauge('host_cpu_used', 'CPU used per host', ['host_id', 'location'])
 host_memory_capacity = Gauge('host_memory_capacity', 'Memory capacity per host', ['host_id', 'location'])
@@ -63,7 +60,6 @@ host_tasks_completed = Gauge('host_tasks_completed', 'Tasks completed per host',
 host_tasks_failed = Gauge('host_tasks_failed', 'Tasks failed per host', ['host_id', 'location'])
 host_uptime = Gauge('host_uptime_seconds', 'Host uptime in seconds', ['host_id', 'location'])
 
-# Performance-Metriken
 task_completion_time = Histogram(
     'task_completion_seconds',
     'Task completion time',
@@ -112,7 +108,7 @@ system_info.info({
 
 
 class MetricsCollector:
-    """Sammelt und berechnet erweiterte Metriken"""
+
 
     def __init__(self):
         self.task_start_times = {}
@@ -163,7 +159,6 @@ class ResourceMiddleman:
         self.ping_matrix = {}
 
     def register_host(self, host_data):
-        """Registriert einen neuen Host"""
         host_id = host_data.get('host_id')
 
         host_info = {
@@ -187,7 +182,6 @@ class ResourceMiddleman:
 
         self._initialize_ping_for_host(host_id)
 
-        # Metriken aktualisieren
         host_registrations.inc()
         self._update_host_metrics(host_id)
         self._update_location_metrics()
@@ -196,7 +190,6 @@ class ResourceMiddleman:
         return True
 
     def _initialize_ping_for_host(self, host_id):
-        """Initialisiert simulierte Ping-Zeiten für einen Host"""
         if host_id not in self.ping_matrix:
             self.ping_matrix[host_id] = {}
 
@@ -219,11 +212,11 @@ class ResourceMiddleman:
         self.ping_matrix[host_id][host_id] = 0
 
     def get_ping(self, from_host, to_host):
-        """Gibt simulierte Ping-Zeit zwischen zwei Hosts zurück"""
+
         return self.ping_matrix.get(from_host, {}).get(to_host, 100.0)
 
     def heartbeat(self, host_id):
-        """Aktualisiert Heartbeat eines Hosts"""
+
         if host_id in self.hosts:
             self.hosts[host_id]['last_heartbeat'] = time.time()
             self.hosts[host_id]['status'] = 'online'
@@ -240,7 +233,6 @@ class ResourceMiddleman:
         return False
 
     def update_host_resources(self, host_id, cpu_used, memory_used):
-        """Aktualisiert Ressourcennutzung eines Hosts"""
         if host_id in self.hosts:
             host = self.hosts[host_id]
             host['cpu_available'] = host['cpu_capacity'] - cpu_used
@@ -255,7 +247,7 @@ class ResourceMiddleman:
         return False
 
     def _update_host_metrics(self, host_id):
-        """Aktualisiert Prometheus-Metriken für einen einzelnen Host"""
+
         if host_id not in self.hosts:
             return
 
@@ -280,19 +272,17 @@ class ResourceMiddleman:
         active_shards_per_host.labels(host_id=host_id, location=location).set(active_count)
 
     def _update_location_metrics(self):
-        """Aktualisiert Location-basierte Metriken"""
         location_counts = defaultdict(int)
 
         for host in self.hosts.values():
             if host['status'] == 'online':
                 location_counts[host['location']] += 1
 
-        # Setze alle bekannten Locations
         for location in set(h['location'] for h in self.hosts.values()):
             active_hosts.labels(location=location).set(location_counts[location])
 
     def _update_resource_metrics(self):
-        """Aktualisiert Ressourcen-Metriken nach Location"""
+
         location_resources = defaultdict(lambda: {
             'cpu_capacity': 0, 'cpu_used': 0,
             'mem_capacity': 0, 'mem_used': 0
@@ -307,7 +297,7 @@ class ResourceMiddleman:
             location_resources[loc]['mem_capacity'] += host['memory_capacity']
             location_resources[loc]['mem_used'] += host['memory_capacity'] - host['memory_available']
 
-        # Metriken pro Location
+        # pro Location
         for location, res in location_resources.items():
             # CPU
             resource_capacity.labels(resource_type='cpu', location=location).set(res['cpu_capacity'])
@@ -330,13 +320,12 @@ class ResourceMiddleman:
                 resource_utilization.labels(resource_type='memory', location=location).set(mem_util)
 
     def _calculate_efficiency_metrics(self):
-        """Berechnet Effizienz- und Optimierungsmetriken"""
+
         online_hosts = [h for h in self.hosts.values() if h['status'] == 'online']
 
         if not online_hosts:
             return
 
-        # Bin-Packing Effizienz (durchschnittliche Auslastung)
         total_efficiency = 0
         for host in online_hosts:
             cpu_util = 1 - (host['cpu_available'] / host['cpu_capacity'])
@@ -347,7 +336,7 @@ class ResourceMiddleman:
         avg_efficiency = total_efficiency / len(online_hosts)
         bin_packing_efficiency.set(avg_efficiency)
 
-        # Shard-Verteilungs-Varianz
+    # Varianz frü shard verteilung
         host_shard_counts = []
         for host in online_hosts:
             count = sum(1 for s in self.shards.values()
@@ -359,7 +348,6 @@ class ResourceMiddleman:
             variance = sum((x - mean) ** 2 for x in host_shard_counts) / len(host_shard_counts)
             shard_distribution_variance.set(variance)
 
-        # Ressourcen-Fragmentierung
         for resource_type in ['cpu', 'memory']:
             fragments = []
             for host in online_hosts:
@@ -375,14 +363,14 @@ class ResourceMiddleman:
                     fragments.append(fragment_ratio)
 
             if fragments:
-                # Fragmentierung = Standardabweichung der verfügbaren Ressourcen
+       # Fragmentierung = Standardabweichung der verfügbaren Ressourcen
                 mean_frag = sum(fragments) / len(fragments)
                 variance_frag = sum((x - mean_frag) ** 2 for x in fragments) / len(fragments)
                 fragmentation_index = variance_frag ** 0.5
                 resource_fragmentation.labels(resource_type=resource_type).set(fragmentation_index)
 
     def submit_task(self, task_data):
-        """Nimmt eine neue Aufgabe entgegen"""
+
         self.task_counter += 1
         task_id = f"task_{self.task_counter}_{int(time.time())}"
 
@@ -423,7 +411,7 @@ class ResourceMiddleman:
         return task_id
 
     def _create_shards(self, task_id):
-        """Erstellt Shards für einen Task"""
+
         task = self.tasks[task_id]
         online_hosts = [h for h in self.hosts.values() if h['status'] == 'online']
 
@@ -473,7 +461,7 @@ class ResourceMiddleman:
         pending_shards.set(redis_client.llen('pending_shards'))
 
     def find_suitable_host_bin_packing(self, cpu_req, memory_req):
-        """Findet Host mit Best-Fit Bin-Packing"""
+
         online_hosts = [
             (host_id, host) for host_id, host in self.hosts.items()
             if host['status'] == 'online' and
@@ -504,7 +492,7 @@ class ResourceMiddleman:
         return best_host
 
     def assign_shard(self, shard_id, host_id):
-        """Weist einen Shard einem Host zu"""
+
         if shard_id not in self.shards or host_id not in self.hosts:
             return False
 
@@ -525,7 +513,7 @@ class ResourceMiddleman:
         task_assignments.inc()
         metrics_collector.record_shard_assigned(shard_id, shard.get('created_at', time.time()))
 
-        # Cross-Region Tracking
+    # über regionen hinweg tracken
         task = self.tasks.get(shard['parent_task'])
         if task:
             task_location = 'client'
@@ -543,7 +531,7 @@ class ResourceMiddleman:
         return True
 
     def complete_shard(self, shard_id, success=True):
-        """Markiert einen Shard als abgeschlossen"""
+
         if shard_id not in self.shards:
             return False
 
@@ -554,7 +542,7 @@ class ResourceMiddleman:
         shard['status'] = 'completed' if success else 'failed'
         shard['completed_at'] = time.time()
 
-        # Ressourcen freigeben
+  # Ressourcen freigeben
         if host_id and host_id in self.hosts:
             host = self.hosts[host_id]
             host['cpu_available'] += shard['cpu_required']
@@ -570,14 +558,14 @@ class ResourceMiddleman:
 
         redis_client.set(f'shard:{shard_id}', json.dumps(shard))
 
-        # Metriken
+   #Metriken
         metrics_collector.record_shard_completed(
             shard_id,
             self.hosts[host_id]['location'] if host_id in self.hosts else 'unknown',
             success
         )
 
-        # Update Parent Task
+        #Update Parent Task
         if parent_task_id in self.tasks:
             task = self.tasks[parent_task_id]
             if success:
@@ -596,7 +584,7 @@ class ResourceMiddleman:
 
                 task['completed_at'] = time.time()
 
-                # Task Completion Metriken
+     #       Task Completion Metriken
                 metrics_collector.record_task_completed(
                     parent_task_id,
                     task.get('description', 'unknown'),
@@ -613,7 +601,7 @@ class ResourceMiddleman:
         return True
 
     def _update_shard_counts(self):
-        """Aktualisiert Shard-Zähler"""
+
         pending = sum(1 for s in self.shards.values() if s['status'] == 'pending')
         running = sum(1 for s in self.shards.values() if s['status'] in ['assigned', 'running'])
 
@@ -621,7 +609,7 @@ class ResourceMiddleman:
         running_shards.set(running)
 
     def check_host_health(self):
-        """Überprüft Health der Hosts"""
+
         current_time = time.time()
 
         for host_id, host in list(self.hosts.items()):
@@ -642,7 +630,7 @@ class ResourceMiddleman:
         self._update_resource_metrics()
 
     def reassign_shards_from_host(self, failed_host_id):
-        """Weist Shards von ausgefallenen Hosts neu zu"""
+
         for shard_id, shard in self.shards.items():
             if shard['assigned_to'] == failed_host_id and shard['status'] in ['assigned', 'running']:
                 logger.info(f"Shard {shard_id} wird neu zugewiesen")
@@ -655,7 +643,7 @@ class ResourceMiddleman:
                 shard_reassignments.labels(reason='host_failure').inc()
 
     def schedule_shards(self):
-        """Scheduler für Shard-Zuweisung"""
+
         while True:
             try:
                 shard_id = redis_client.lpop('pending_shards')
@@ -755,7 +743,7 @@ def get_ping(from_host, to_host):
 
 @app.route('/metrics', methods=['GET'])
 def metrics():
-    return generate_latest(), 200
+    return Response(generate_latest(),mimetype=CONTENT_TYPE_LATEST)
 
 
 @app.route('/health', methods=['GET'])
@@ -781,7 +769,7 @@ def scheduler_loop():
 
 
 def metrics_update_loop():
-    """Periodisches Update von berechneten Metriken"""
+
     while True:
         try:
             middleman._update_resource_metrics()
