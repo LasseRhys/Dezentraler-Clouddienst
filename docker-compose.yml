@@ -60,14 +60,14 @@ services:
       - cloud_network
     restart: unless-stopped
 
-  host_paris:
+  host_johanngeorgenstadt:
     build:
       context: ./provider
       dockerfile: Dockerfile
-    container_name: Paris
+    container_name: Johanngeorgenstadt
     environment:
-      - HOST_ID=host_paris
-      - HOST_NAME=Paris-01
+      - HOST_ID=host_johanngeorgenstadt
+      - HOST_NAME=Johanngeorgenstadt-01
       - LOCATION=europe
       - MIDDLEMAN_URL=http://middleman:5000
       - CPU_CAPACITY=4
@@ -76,7 +76,7 @@ services:
       - FAILURE_SIMULATION=true
     volumes:
       - ./provider:/app
-      - paris_data:/app/data
+      - johanngeorgenstadt_data:/app/data
     depends_on:
       - middleman
     networks:
@@ -154,15 +154,15 @@ services:
       - cloud_network
     restart: unless-stopped
 
-  host_singapore:
+  host_tuvalu:
     build:
       context: ./provider
       dockerfile: Dockerfile
-    container_name: Singapore
+    container_name: Tuvalu
     environment:
-      - HOST_ID=host_singapore
-      - HOST_NAME=Singapore-01
-      - LOCATION=asia
+      - HOST_ID=host_tuvalu
+      - HOST_NAME=Tuvalu-01
+      - LOCATION=oceania
       - MIDDLEMAN_URL=http://middleman:5000
       - CPU_CAPACITY=6
       - MEMORY_CAPACITY=12288
@@ -170,7 +170,7 @@ services:
       - FAILURE_SIMULATION=true
     volumes:
       - ./provider:/app
-      - singapore_data:/app/data
+      - tuvalu_data:/app/data
     depends_on:
       - middleman
     networks:
@@ -263,11 +263,11 @@ volumes:
   middleman_logs:
   redis_data:
   berlin_data:
-  paris_data:
+  johanngeorgenstadt_data:
   nyc_data:
   sf_data:
   tokyo_data:
-  singapore_data:
+  tuvalu_data:
   edge_data:
   user_logs:
   prometheus_data:
